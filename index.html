@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ro" data-theme="auto">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#f5f5f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<meta name="description" content="Carepack — Competitive Intelligence, Reputation Monitoring & Market Intelligence.">
+<title>Carepack — Competitive Intelligence</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230071e3'/><path d='M30 62V38l20 12 20-12v24' stroke='white' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="assets/css/tokens.css">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/views.css">
+</head>
+<body>
+  <div id="boot" class="boot">
+    <div class="boot__mark" aria-hidden="true"></div>
+    <p>Se încarcă Carepack…</p>
+  </div>
+
+  <div id="app" hidden></div>
+
+  <div id="sheet-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+
+  <script type="module" src="assets/js/app.js"></script>
+  <noscript>
+    <div style="padding:40px;font:16px -apple-system,system-ui,sans-serif;text-align:center">
+      Carepack are nevoie de JavaScript activat.
+    </div>
+  </noscript>
+</body>
+</html>

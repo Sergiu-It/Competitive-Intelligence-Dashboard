@@ -1,0 +1,176 @@
+/* ============================================================
+   Carepack Design Tokens — Apple-inspired system
+   ============================================================ */
+:root {
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+               "Inter", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Monaco, "Cascadia Mono", monospace;
+
+  --fs-11: 0.6875rem;  --fs-12: 0.75rem;   --fs-13: 0.8125rem;
+  --fs-14: 0.875rem;   --fs-15: 0.9375rem; --fs-16: 1rem;
+  --fs-17: 1.0625rem;  --fs-19: 1.1875rem; --fs-22: 1.375rem;
+  --fs-26: 1.625rem;   --fs-32: 2rem;      --fs-40: 2.5rem;
+  --fs-52: 3.25rem;
+
+  --lh-tight: 1.08;
+  --lh-snug: 1.28;
+  --lh-body: 1.5;
+
+  --tracking-tight: -0.022em;
+  --tracking-snug: -0.014em;
+  --tracking-wide: 0.06em;
+
+  /* Spacing scale (4pt) */
+  --s1: 4px;  --s2: 8px;  --s3: 12px; --s4: 16px; --s5: 20px;
+  --s6: 24px; --s7: 32px; --s8: 40px; --s9: 56px; --s10: 72px;
+
+  /* Radii */
+  --r-xs: 8px; --r-sm: 12px; --r-md: 16px; --r-lg: 20px;
+  --r-xl: 26px; --r-pill: 999px;
+
+  /* Motion — Apple spring-ish easing */
+  --ease: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-1: 140ms; --dur-2: 240ms; --dur-3: 420ms; --dur-4: 700ms;
+
+  /* Layout */
+  --sidebar-w: 264px;
+  --sidebar-w-compact: 76px;
+  --topbar-h: 56px;
+  --tabbar-h: calc(58px + env(safe-area-inset-bottom, 0px));
+  --page-max: 1440px;
+
+  /* Accent hues (shared across themes) */
+  --hue-blue:   #0071e3;
+  --hue-green:  #1f9d55;
+  --hue-red:    #e02f2f;
+  --hue-orange: #e07b00;
+  --hue-purple: #8c46d4;
+  --hue-teal:   #12879b;
+  --hue-pink:   #d81f5a;
+  --hue-indigo: #4f4bd6;
+  --hue-yellow: #b98600;
+}
+
+/* ---------- Light theme ---------- */
+:root,
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --bg: #f5f5f7;
+  --bg-elevated: #ffffff;
+  --bg-sunken: #ececee;
+  --surface: #ffffff;
+  --surface-2: #f7f7f9;
+  --surface-3: #f0f0f3;
+  --surface-glass: rgba(255, 255, 255, 0.72);
+  --surface-hover: rgba(0, 0, 0, 0.035);
+  --surface-active: rgba(0, 0, 0, 0.06);
+
+  --text: #1d1d1f;
+  --text-2: #55555b;
+  --text-3: #86868b;
+  --text-inverse: #ffffff;
+
+  --line: rgba(0, 0, 0, 0.09);
+  --line-strong: rgba(0, 0, 0, 0.16);
+
+  --accent: #0071e3;
+  --accent-hover: #0077ed;
+  --accent-soft: rgba(0, 113, 227, 0.10);
+  --accent-text: #0062c4;
+
+  --pos: #1f9d55;  --pos-soft: rgba(31, 157, 85, 0.12);
+  --neg: #e02f2f;  --neg-soft: rgba(224, 47, 47, 0.10);
+  --warn: #e07b00; --warn-soft: rgba(224, 123, 0, 0.12);
+  --info: #12879b; --info-soft: rgba(18, 135, 155, 0.12);
+  --neutral-soft: rgba(0, 0, 0, 0.06);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.05), 0 1px 1px rgba(0,0,0,.03);
+  --shadow-2: 0 4px 16px rgba(0,0,0,.07), 0 1px 3px rgba(0,0,0,.04);
+  --shadow-3: 0 18px 48px rgba(0,0,0,.14), 0 4px 12px rgba(0,0,0,.06);
+  --shadow-key: 0 0 0 4px rgba(0, 113, 227, 0.28);
+
+  --grid-line: rgba(0, 0, 0, 0.07);
+  --chart-track: rgba(0, 0, 0, 0.07);
+}
+
+/* ---------- Dark theme ---------- */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg: #000000;
+  --bg-elevated: #1c1c1e;
+  --bg-sunken: #0a0a0b;
+  --surface: #1a1a1c;
+  --surface-2: #232326;
+  --surface-3: #2c2c30;
+  --surface-glass: rgba(24, 24, 26, 0.72);
+  --surface-hover: rgba(255, 255, 255, 0.06);
+  --surface-active: rgba(255, 255, 255, 0.1);
+
+  --text: #f5f5f7;
+  --text-2: #b6b6bb;
+  --text-3: #86868b;
+  --text-inverse: #0a0a0b;
+
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.2);
+
+  --accent: #0a84ff;
+  --accent-hover: #3d9bff;
+  --accent-soft: rgba(10, 132, 255, 0.16);
+  --accent-text: #6cb6ff;
+
+  --pos: #32d474;  --pos-soft: rgba(50, 212, 116, 0.16);
+  --neg: #ff5b52;  --neg-soft: rgba(255, 91, 82, 0.16);
+  --warn: #ff9f0a; --warn-soft: rgba(255, 159, 10, 0.16);
+  --info: #40c8e0; --info-soft: rgba(64, 200, 224, 0.16);
+  --neutral-soft: rgba(255, 255, 255, 0.09);
+
+  --shadow-1: 0 1px 2px rgba(0,0,0,.5);
+  --shadow-2: 0 6px 20px rgba(0,0,0,.55);
+  --shadow-3: 0 22px 60px rgba(0,0,0,.7);
+  --shadow-key: 0 0 0 4px rgba(10, 132, 255, 0.4);
+
+  --grid-line: rgba(255, 255, 255, 0.09);
+  --chart-track: rgba(255, 255, 255, 0.1);
+}
+
+/* Auto follows the OS unless the user picked a theme */
+@media (prefers-color-scheme: dark) {
+  :root[data-theme="auto"] {
+    color-scheme: dark;
+    --bg: #000000;
+    --bg-elevated: #1c1c1e;
+    --bg-sunken: #0a0a0b;
+    --surface: #1a1a1c;
+    --surface-2: #232326;
+    --surface-3: #2c2c30;
+    --surface-glass: rgba(24, 24, 26, 0.72);
+    --surface-hover: rgba(255, 255, 255, 0.06);
+    --surface-active: rgba(255, 255, 255, 0.1);
+    --text: #f5f5f7;
+    --text-2: #b6b6bb;
+    --text-3: #86868b;
+    --text-inverse: #0a0a0b;
+    --line: rgba(255, 255, 255, 0.10);
+    --line-strong: rgba(255, 255, 255, 0.2);
+    --accent: #0a84ff;
+    --accent-hover: #3d9bff;
+    --accent-soft: rgba(10, 132, 255, 0.16);
+    --accent-text: #6cb6ff;
+    --pos: #32d474;  --pos-soft: rgba(50, 212, 116, 0.16);
+    --neg: #ff5b52;  --neg-soft: rgba(255, 91, 82, 0.16);
+    --warn: #ff9f0a; --warn-soft: rgba(255, 159, 10, 0.16);
+    --info: #40c8e0; --info-soft: rgba(64, 200, 224, 0.16);
+    --neutral-soft: rgba(255, 255, 255, 0.09);
+    --shadow-1: 0 1px 2px rgba(0,0,0,.5);
+    --shadow-2: 0 6px 20px rgba(0,0,0,.55);
+    --shadow-3: 0 22px 60px rgba(0,0,0,.7);
+    --shadow-key: 0 0 0 4px rgba(10, 132, 255, 0.4);
+    --grid-line: rgba(255, 255, 255, 0.09);
+    --chart-track: rgba(255, 255, 255, 0.1);
+  }
+}
